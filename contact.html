@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CAC Victory District</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">CAC Victory District</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Contact Us</h1>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <section class="contact-form-section">
+                    <h2>Send us a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <p id="formMessage" class="form-message"></p>
+                    </form>
+                </section>
+
+                <!-- Contact Information -->
+                <section class="contact-info-section">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="info-item">
+                        <h3>Address</h3>
+                        <p>CAC Victory District<br>Church Location<br>City, State ZIP Code</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+1234567890">+1 (234) 567-8900</a></p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@cacvictory.com">info@cacvictory.com</a></p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>Service Times</h3>
+                        <p><strong>Sunday:</strong> 9:00 AM - 12:00 PM<br>
+                           <strong>Wednesday:</strong> 7:00 PM<br>
+                           <strong>Saturday:</strong> Various Times</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>Follow Us</h3>
+                        <p>
+                            <a href="#" class="social-link">Facebook</a> | 
+                            <a href="#" class="social-link">Twitter</a> | 
+                            <a href="#" class="social-link">Instagram</a>
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 CAC Victory District. All rights reserved.</p>
+            <p>Christ Apostolic Church - Serving with Faith and Love</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
