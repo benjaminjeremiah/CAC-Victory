@@ -1,4 +1,59 @@
 // ===========================
+// CAROUSEL FUNCTIONALITY
+// ===========================
+
+let slideIndex = 1;
+let slideTimer;
+
+function changeSlide(n) {
+    clearTimeout(slideTimer);
+    showSlide(slideIndex += n);
+    startAutoSlide();
+}
+
+function currentSlide(n) {
+    clearTimeout(slideTimer);
+    showSlide(slideIndex = n);
+    startAutoSlide();
+}
+
+function showSlide(n) {
+    const slides = document.getElementsByClassName('carousel-slide');
+    const indicators = document.getElementsByClassName('indicator');
+
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active');
+    }
+    for (let i = 0; i < indicators.length; i++) {
+        indicators[i].classList.remove('active');
+    }
+
+    slides[slideIndex - 1].classList.add('active');
+    indicators[slideIndex - 1].classList.add('active');
+}
+
+function startAutoSlide() {
+    slideTimer = setTimeout(function() {
+        slideIndex++;
+        showSlide(slideIndex);
+        startAutoSlide();
+    }, 5000); // Change slide every 5 seconds
+}
+
+// Initialize carousel on page load
+window.addEventListener('load', function() {
+    showSlide(slideIndex);
+    startAutoSlide();
+});
+
+// ===========================
 // HAMBURGER MENU TOGGLE
 // ===========================
 
