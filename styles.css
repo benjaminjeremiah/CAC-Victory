@@ -32,7 +32,7 @@ body {
 .navbar {
     background-color: #1a3a52;
     color: white;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -45,8 +45,27 @@ body {
     align-items: center;
 }
 
+.nav-brand-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.church-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.church-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.5);
+}
+
 .nav-brand {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: #ffd700;
 }
@@ -604,9 +623,22 @@ section p {
         display: flex;
     }
 
+    .nav-brand-container {
+        gap: 0.5rem;
+    }
+
+    .church-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav-brand {
+        font-size: 1rem;
+    }
+
     .nav-menu {
         position: absolute;
-        top: 60px;
+        top: 65px;
         left: 0;
         right: 0;
         background-color: #1a3a52;
@@ -702,12 +734,17 @@ section p {
         white-space: normal;
     }
 
-    .hero-content h1 {
-        font-size: 1.5rem;
+    .church-logo {
+        width: 40px;
+        height: 40px;
     }
 
     .nav-brand {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
     }
 
     .btn {
