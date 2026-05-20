@@ -1,4 +1,37 @@
 // ===========================
+// HAMBURGER MENU TOGGLE
+// ===========================
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', function() {
+        menuToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
+
+// Close menu when a link is clicked
+if (navMenu) {
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.navbar')) {
+        menuToggle?.classList.remove('active');
+        navMenu?.classList.remove('active');
+    }
+});
+
+// ===========================
 // FORM VALIDATION & HANDLING
 // ===========================
 
